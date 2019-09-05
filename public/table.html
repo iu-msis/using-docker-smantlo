@@ -30,39 +30,45 @@
   <p>The table lists the following:</p>
     <ul>
       <li>Type of dirt</li>
-      <li>Price per ton</li>
+      <li>Price (in dollars) per ton</li>
       <li>How I would rank each type of dirt on a scale from 1-5 (no such thing as perfect dirt)</li>
       <li>The date I discovered each type of dirt</li>
     </ul>
-  <table style="width:100%">
-    <tr>
-      <th>Dirt Type</th>
-      <th>Mud</th>
-      <th>Dirt</th>
-      <th>Grime</th>
-      <th>Soil</th>
-    </tr>
-    <tr>
-      <th>Price</th>
-      <th>$50</th>
-      <th>$90</th>
-      <th>$4000</th>
-      <th>$200</th>
-    </tr>
-    <tr>
-      <th>Rank</th>
-      <th>2</th>
-      <th>3</th>
-      <th>1</th>
-      <th>4</th>
-    </tr>
-    <tr>
-      <th>Date</th>
-      <th>12 Oct 1990</th>
-      <th>20 Feb 1981</th>
-      <th>19 Jul 1979</th>
-      <th>30 Oct 1996</th>
-    </tr>
+  <table id="dirtTable" style="width:100%">
+    <thead>
+      <tr>
+        <th>Dirt Type</th>
+        <th>Price ($)</th>
+        <th>Rank</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mud</td>
+        <td>50</td>
+        <td>2</td>
+        <td>12 Oct 1990</td>
+      </tr>
+      <tr>
+        <td>Dirt</td>
+        <td>90</td>
+        <td>3</td>
+        <td>20 Feb 1981</td>
+      </tr>
+      <tr>
+        <td>Grime</td>
+        <td>4000</td>
+        <td>1</td>
+        <td>19 Jul 1979</td>
+      </tr>
+      <tr>
+        <td>Soil</td>
+        <td>200</td>
+        <td>4</td>
+        <td>30 Oct 1996</td>
+      </tr>
+    </tbody>
   </table> <!--https://www.w3schools.com/html/html_tables.asp<-->
   <br>
   <p>Tell me about your favorite dirt</p>
@@ -85,6 +91,13 @@
     <input type="date" class="form-control" id="dirtdate">
   <button type="submit">Submit</button>
 </form> <!--https://getbootstrap.com/docs/4.0/components/forms/<-->
+<script src="js/tablesort.min.js"></script>
+<script src="js/tablesort.number.js"></script>
+<script src="js/tablesort.date.js"></script>
+<script>
+  new Tablesort(document.getElementById('dirtTable'));
+</script>
+
 
 </body>
 </html>
