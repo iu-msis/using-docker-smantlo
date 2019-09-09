@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <title>Welcome</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  <!--https://getbootstrap.com/docs/4.3/getting-started/introduction/<-->
+  <link rel="stylesheet" href="css\homepage_styling.css">
+</head>
+<header>
+  <p>DIRT</p>
+</header>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!--https://getbootstrap.com/docs/4.3/components/navbar/#text<-->
+  <a class="navbar-brand" href="index.html">About Me</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="table.html">Types of Dirt<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="stamps.html">Stamp Collection</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+  <h1 class="center">Dirt</h1>
+  <p>One of my hobbies is dirt. Below is a table with all of my favorite types of dirt with key details.</p>
+  <p>The table lists the following:</p>
+    <ul>
+      <li>Type of dirt</li>
+      <li>Price (in dollars) per ton</li>
+      <li>How I would rank each type of dirt on a scale from 1-5 (no such thing as perfect dirt)</li>
+      <li>The date I discovered each type of dirt</li>
+    </ul>
+  <table id="dirtTable" style="width:100%">
+    <thead>
+      <tr>
+        <th>Dirt Type</th>
+        <th>Price ($)</th>
+        <th>Rank</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mud</td>
+        <td>50</td>
+        <td>2</td>
+        <td>10/12/1990</td>
+      </tr>
+      <tr>
+        <td>Dirt</td>
+        <td>90</td>
+        <td>3</td>
+        <td>02/20/1981</td>
+      </tr>
+      <tr>
+        <td>Grime</td>
+        <td>4000</td>
+        <td>1</td>
+        <td>07/19/1979</td>
+      </tr>
+      <tr>
+        <td>Soil</td>
+        <td>200</td>
+        <td>4</td>
+        <td>10/30/1996</td>
+      </tr>
+    </tbody>
+  </table> <!--https://www.w3schools.com/html/html_tables.asp<-->
+  <br>
+  <p>Tell me about your favorite dirt</p>
+  <br>
+  <form>
+  <div class="form-group">
+    <label for="dirttype">Type of Dirt</label>
+    <input type="string" class="form-control" id="favorite_dirt">
+  </div>
+  <div class="form-group">
+    <label for="dirtprice">Price</label>
+    <input type="currency" class="form-control" id="price_of_dirt>
+  </div>
+  <div class="form-group">
+    <label for="rank">Rank</label>
+    <input type="integer" class="form-control" id="dirt_rank">
+  </div>
+  <div class="form-group">
+    <label for="date">Date Discovered</label>
+    <input type="date" class="form-control" id="dirtdate">
+  <button type="submit">Submit</button>
+</form> <!--https://getbootstrap.com/docs/4.0/components/forms/<-->
+<script src="js/tablesort.min.js"></script>
+<script src="js/tablesort.number.js"></script>
+<script src="js/tablesort.date.js"></script>
+<script>
+  new Tablesort(document.getElementById('dirtTable'));
+</script>
+<!-- http://tristen.ca/tablesort/demo/ -->
+
+</body>
+</html>
