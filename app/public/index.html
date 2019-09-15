@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html> <!-- Worked with Alex Braunscheidel, Griffin Jung, Roger Bowen, Shobhit Bhatnagar.-->
 <meta charset="utf-8"/>
 <html>
 <head>
@@ -28,13 +28,15 @@
   </nav>
 <h1 class="center">Welcome</h1>
 
-<div id="randomUser" v-if="user.results"> <!--https://forum.vuejs.org/t/vue-warn-error-in-render-typeerror-cannot-read-property-0-of-undefined/28415-->
-<img v-bind:src="user.picture.large"><br><br> <!--https://vuejs.org/v2/guide/-->
+<div id="randomUser">
+<div v-if="user.picture"> <!--https://forum.vuejs.org/t/vue-warn-error-in-render-typeerror-cannot-read-property-0-of-undefined/28415-->
+<img v-bind:src="user.picture.large"><br><br> <!--https://vuejs.org/v2/guide/--> <!--Logical clarifications from Alex Braunscheidel, Griffin Jung.-->
 <span>Name: {{ user.name.title }} {{ user.name.first }} {{ user.name.last  }}</span><br><br>
 <span>Country of Origin: {{  user.nat  }}</span><br><br>
 <span>DOB: {{  user.dob.date  }}</span><br><br>
 <span>Age: {{ user.dob.age }}</span><br><br>
 <a href="mailto:smantlo@iu.edu"><span>Email: {{ user.email }}</span></a> <!--https://www.buildableweb.com/article?articleTitle=making-a-clickable-link-to-an-email-address--1294531104--81--howto -->
+</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
