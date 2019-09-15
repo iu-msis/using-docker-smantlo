@@ -26,14 +26,17 @@
   </div>
   </nav>
 <h1 class="center">Welcome</h1>
-<img src="https://www.tickethalifax.com/imager/b/big/97681187/da83/Some_Guy_from_the_Internet.jpg" alt="Max Norton">         <!--image linking taken from w3 schools, picture from this site: https://www.tickethalifax.com/events/97558304/some-guy-from-the-internet-at-halifax-fringe in case you wanted it<-->
-<h4>This page is dedicated to my incredibly exciting life</h4>
-<h6>Below are some details to get you started on this journey</h6>
-<ul>
-  <li>Name: Max Norton</li>
-  <li>Origin: USA (in the woods somewhere)</li>
-  <li>DOB: 28 June 1966</li>
-  <li>Age: 53</li>
-  <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Email: maximusnortonus@hogwarts.edu</a></li> <!--ads really ruined this but hopefully you have an ad blocker<-->
+
+
+<div id="randomUser">
+<img v-bind:src="user.picture.large"><br> <!--https://vuejs.org/v2/guide/-->
+<span>Name: {{ user.name.title }} {{ user.name.first }} {{ user.name.last  }}</span><br>
+<span>Country of Origin: {{  user.nat  }}</span><br>
+<span>DOB: {{ user.dob.date }}</span><br>
+<span>Age: {{ user.dob.age }}</span><br>
+<a href="mailto:{{ user.email }}"><span>Email: {{ user.email }}</span></a> <!--https://www.buildableweb.com/article?articleTitle=making-a-clickable-link-to-an-email-address--1294531104--81--howto -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/randomperson.app.js"></script> <!--https://randomuser.me/-->
+
 </body>
 </html>
